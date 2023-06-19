@@ -44,7 +44,7 @@ const Navbar = () => {
               <MdOutlineClose
                 onClick={toggleShowMenu}
                 size={25}
-                className="ml-2 mt-1 mr-4 text-gray-500 cursor-pointer hover:text-gray-900"
+                className="ml-2 mt-1 mr-4 text-gray-500 cursor-pointer hover:text-gray-900 scale-100 hover:scale-110"
               />
               <Link href={"/home"}>
                 <h2 className="text-2xl font-bold text-gray-500 mr-20 hover:text-black">
