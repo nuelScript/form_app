@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="border-b py-4 inline-flex flex-col h-full w-fit">
         <div className="inline-flex">
           <RiMenu2Fill
-            className="text-gray-500 ml-4 mt-1.5 cursor-pointer hover:text-gray-900"
+            className="text-gray-500 ml-4 mt-1.5 cursor-pointer hover:text-gray-900 scale-100 hover:scale-110"
             onClick={toggleShowMenu}
             size={20}
           />
