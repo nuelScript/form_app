@@ -1,54 +1,27 @@
-import { GetServerSideProps } from "next";
+import { DataTable } from "./data-table";
+import { columns, Attendance } from './columns';
 
-interface AttendanceProps {
-    id: number;
-    date: string;
-    present: boolean;
-    time: string;
+ 
+async function getData(): Promise<Attendance[]> {
+  return [
+    {
+      id: 1,
+      name: 'Emmanuel',
+      matricNo: '19CK025872',
+      department: 'Electrical Engineering',
+      date: '2015-01-01',
+      time: '12:31'
+    }
+  ]
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const attendance: AttendanceProps[] = [];
-    return {
-        props: {
-            attendance,
-        },
-    };
-}
-
-const AttendancePage: React.FC<{ attendance: AttendanceProps[] }> = ({ attendance }) => {
+export default async function AttendancePage() {
+  const data = getData();
+  
     return (
-      <div>
-        <div className="w-full h-full flex items-center justify-center">
-          <table className="table-auto">
-            <thead>
-              <tr>
-                <th>Song</th>
-                <th>Artist</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>The Sliding Mr. Bones</td>
-                <td>Malcolm Lockyer</td>
-                <td>1961</td>
-              </tr>
-              <tr>
-                <td>Witchy Woman</td>
-                <td>The Eagles</td>
-                <td>1972</td>
-              </tr>
-              <tr>
-                <td>Shining Star</td>
-                <td>Earth, Wind, and Fire</td>
-                <td>1975</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div className="container mx-auto py-10">
+        <DataTable columns={columns} data={data} />  
       </div>
     );
 };
 
-export default AttendancePage;
