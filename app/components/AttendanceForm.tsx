@@ -1,7 +1,6 @@
 'use client';
 
 import { useForm } from "react-hook-form";
-import axios from "axios";
 
 type FormData = {
     name: string;
@@ -18,14 +17,7 @@ const AttendanceForm = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
     const onSubmit = async (data: FormData) => {
-        try {
-          // Make a POST request to the API endpoint
-          await axios.post("/api/individuals", data);
-          // Reset the form after successful submission
-          reset();
-        } catch (error) {
-          console.error("Error submitting form:", error);
-        }
+        console.log(data);
     };
 
     return (
