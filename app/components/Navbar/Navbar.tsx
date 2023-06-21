@@ -31,7 +31,7 @@ const Navbar = () => {
           />
           <Link href={"/home"}>
             <h2 className="text-2xl font-bold text-gray-500 hover:text-black ml-4 mr-8">
-              Form App
+              Face Recognition App
             </h2>
           </Link>
         </div>
