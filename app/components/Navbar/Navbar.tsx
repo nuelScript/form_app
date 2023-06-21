@@ -95,12 +95,22 @@ const Navbar = () => {
                 <ul className="w-full">
                   <Link href={"/home"}>
                     <li className="pt-1 hover:text-gray-600 px-10">
-                      Economics
+                      EIE 412
                     </li>
                   </Link>
                   <Link href={"/home"}>
                     <li className="pt-4 hover:text-gray-600 px-10">
-                      Mathematics
+                      EIE 416
+                    </li>
+                  </Link>
+                  <Link href={"/home"}>
+                    <li className="pt-4 hover:text-gray-600 px-10">
+                      CEN 416
+                    </li>
+                  </Link>
+                  <Link href={"/home"}>
+                    <li className="pt-4 hover:text-gray-600 px-10">
+                      EIE 413
                     </li>
                   </Link>
                 </ul>
